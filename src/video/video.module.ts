@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Video } from './entity/video.entity';
 import { VideoController } from './video.controller';
 import { VideoService } from './video.service';
+import { ThrottlerBehindProxyGuard } from 'src/common/guard/throttler-behind-proxy.guard';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Video])],
